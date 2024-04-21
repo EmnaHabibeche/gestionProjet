@@ -6,17 +6,19 @@ import java.util.List;
 
 public class Projet {
     // Attributes
+    private Integer id;
     private String name;
     private String description;
     private Date deadline;
     private List<Tache> taches;
 
     // Constructor
-    public Projet(String name, String description, Date deadline) {
+    public Projet() {
         this.name = name;
         this.description = description;
         this.deadline = deadline;
         this.taches = new ArrayList<>();
+        this.id = id;
     }
 
     // Getters and setters
@@ -60,6 +62,14 @@ public class Projet {
     // Method to remove a task from the project
     public void removeTache(Tache tache) {
         taches.remove(tache);
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
 }
